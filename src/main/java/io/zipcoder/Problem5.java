@@ -3,20 +3,22 @@ package io.zipcoder;
 public class Problem5 {
 
     public String reverseString(String input) {
-//        String stringToReturn = "";
-//        for(int i = 0; i < input.length(); i++) {
-//            stringToReturn = input.charAt(i) + stringToReturn;
-//        }
-//        return stringToReturn;
-        return lastCharToBeginning(input, "");
+        return indexCharToBeginning(input, 0);
     }
 
-    private String lastCharToBeginning(String original, String current) {
-        if(original.length() > 0) {
-            return lastCharToBeginning(original.substring(1), original.substring(0, 1) + current);
+    private String indexCharToBeginning(String input, int index) {
+        if(index == input.length()) {
+            return input;
         }
         else {
-            return current;
+            if(index == input.length() - 1 || input.substring(index + 1, index + 2).equals(" ")) {
+                input = input.substring(index, index + 1).toUpperCase() + input.substring(0, index) + input.substring(index + 1);
+            }
+            else {
+                input = input.substring(index, index + 1) + input.substring(0, index) + input.substring(index + 1);
+            }
+            index++;
+            return indexCharToBeginning(input, index);
         }
     }
 }

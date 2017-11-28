@@ -10,7 +10,7 @@ public class Problem5Test {
         Problem5 problem5 = new Problem5();
         String input = "I love UNIT Testing";
 
-        String expected = "GnitesT TINU Eovl I";
+        String expected = "GnitseT TINU Evol I";
         String actual = problem5.reverseString(input);
 
         Assert.assertEquals(expected, actual);

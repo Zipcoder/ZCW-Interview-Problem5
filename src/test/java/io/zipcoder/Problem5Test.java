@@ -12,7 +12,7 @@ public class Problem5Test {
 
         String actual = problem5.reverseAndCapitalizeString(input);
 
-        String expected = "Gnitest TINU Eovl I";
+        String expected = "GnitseT TINU Evol I";
 
         Assert.assertEquals(expected, actual);
     }

@@ -8,8 +8,9 @@ public class Problem5Test {
     @Test
     public void testReverseString(){
         String string = "I love UNIT Testing";
-        String expected ="Gnitest TINU Eovl I";
-        String actual = problem5.reverseString(string);
+        String expected ="Gnitset Tinu Evol I";
+        String reverse=problem5.reverseString(string);
+        String actual=problem5.capitalizeFirstL(reverse);
         Assert.assertEquals(expected,actual);
     }
 }

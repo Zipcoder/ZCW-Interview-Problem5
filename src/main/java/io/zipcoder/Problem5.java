@@ -1,8 +1,6 @@
 package io.zipcoder;
 
 
-import java.util.regex.Pattern;
-
 public class Problem5 {
 
     public String reverseString(String string){
@@ -14,9 +12,10 @@ public class Problem5 {
     }
     public String capitalizeFirstL(String reverse){
         String[] split = reverse.split(" ");
+        String temp="";
         for(String each: split){
-            each.charAt(0).toUpperCase();
+            temp+=each.substring(0,1).toUpperCase()+each.substring(1,each.length()).toLowerCase()+" ";
         }
-
+        return temp.trim();
     }
 }

@@ -1,29 +1,41 @@
 package io.zipcoder;
 
-import java.util.ArrayList;
-
 public class Problem5 {
 
-
     public static void main(String[] args) {
-        String input = "I love UNIT Testing";
-
-        StringBuilder sb = new StringBuilder();
-        sb.append(input);
-        sb = sb.reverse();
-
-        for (int i = 0; i < sb.length(); i++)
-            System.out.println(sb.charAt(i));
-
+        String stringLove = "I love UNIT Testing";
+        System.out.println(reverse(stringLove));
     }
 
+        //Output: "GnitseT TINU Evol I"
 
-    public static String reverse(String stringLove) {
-    return
+
+    public static String reverse(String input) {
+        char[] stringChar = input.toCharArray();
+        int begin = 0;
+        int end = stringChar.length - 1;
+        char x;
+        while (end > begin) {
+            x = stringChar[begin];
+            stringChar[begin] = stringChar[end];
+            stringChar[end] = x;
+            end--;
+            begin++;
+        }
+        return new String(stringChar);
     }
 }
 
-
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(input);
+//        sb = sb.reverse();
+//
+//        for (int i = 0; i < sb.length(); i++)
+//            System.out.println(sb.charAt(i));
+//
+//    }
+//
+//
 //    public static String capitalize(String sL) {
 //
 //        StringBuilder sb = new StringBuilder();

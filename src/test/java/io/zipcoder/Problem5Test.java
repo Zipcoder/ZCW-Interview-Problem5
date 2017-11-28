@@ -7,7 +7,7 @@ import org.junit.Test;
 public class Problem5Test {
 
     // Input: "I love UNIT Testing"
-    // Output: "Gnitest TINU Eovl I"
+    // Output: "GnitseT TINU Evol I"
 
     private String nothing = "";
     private Problem5 problem;
@@ -19,35 +19,19 @@ public class Problem5Test {
     }
 
     @Test
-
     public void reverse() {
-        String expected = " gnitesT TINU eovl I";
-        String actual = problem.reverse();
+        String expected = "gnitesT TINU eovl I";
+        String actual = problem.reverse("I love UNIT Testing");
         Assert.assertEquals(expected, actual);
 
     }
 
-    @Test
-      public void capitalizeFirstWord(){
-
-
-      }
-
-
-    @Test
-    public void noInputReverseTest(){
-        Boolean actual = Boolean.TRUE;
-        Boolean expected = problem.reverse(nothing);
-        Assert.assertEquals(expected, actual);
-    }
-
-
-    @Test
-      public void noInputCapitalizeTest(){
-      Boolean actaul = Boolean.TRUE;
-      Boolean expected = problem.reverse(nothing);
-      Assert.assertEquals(expected, actual);
+//    @Test
+//    public void capitalize() {
+//        String expected = "GnitseT TINU Evol I";
+//        String actual = problem.capitalize("gnitesT TINU eovl I");
+//        Assert.assertEquals(expected, actual);
+//
+//    }
 }
 
-
-}

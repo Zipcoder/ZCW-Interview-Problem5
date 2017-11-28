@@ -4,11 +4,9 @@ public class Problem5 {
 
     public String reverseString(String inputString){
 
-        inputString = String.valueOf(inputString.toCharArray());
 
         for (int i = inputString.length()-1;i >= 0; i--){
-            inputString = inputString.toLowerCase();
-            //inputString.replace(inputString.charAt(inputString.length()-1))
+            inputString += inputString.charAt(i);
         }
 
 
@@ -23,7 +21,7 @@ public class Problem5 {
 //        }
 //
 //        return output.toString();
-        return inputString;
+        return inputString.substring(inputString.length()/2);
     }
 
 }

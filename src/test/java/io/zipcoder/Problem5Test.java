@@ -10,7 +10,7 @@ public class Problem5Test {
         String input = "I love UNIT Testing";
         Problem5 test = new Problem5();
 
-        String expected = "Gnitest TINU Eovl I";
+        String expected = "Gnitset TINU Evol I";
 
         String actual = test.reverseString(input);
 

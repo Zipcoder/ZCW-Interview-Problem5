@@ -9,9 +9,8 @@ public class Problem5Test {
 
     @Test
     public void reverseTheString(){
-        String[] arr = {"I love UNIT Testing"};
-        String expected = "Gnitest TINU Eovl I";
-        String actual = problem5.reverseTheString(arr);
+        String expected = "gnitset TINU evol i";
+        String actual = problem5.reverseTheString("i love UNIT testing");
         Assert.assertEquals(expected,actual);
     }
-}//not working
+}

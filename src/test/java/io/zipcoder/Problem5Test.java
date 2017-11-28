@@ -24,9 +24,18 @@ public class Problem5Test {
     }
 
     @Test
+    public void reverseStringNoNewVariables() {
+        String forwardString = "I love andrew";
+        String backwardsExpected = "werdna evol I";
+        String actual = new Problem5().reverseStringNoNewVariables(forwardString);
+
+        Assert.assertEquals(backwardsExpected, actual);
+    }
+
+    @Test
     public void capitalizeFirstLetterOfEveryWordTest() {
-        String forwardString = "i love andrew";
-        String expectedString = "I Love Andrew";
+        String forwardString = "I love UNIT testing";
+        String expectedString = "Gnitset TINU Evol I";
         String actual = new Problem5().capitalizeFirstLetterOfEveryWord(forwardString);
 
         Assert.assertEquals(expectedString, actual);

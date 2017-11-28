@@ -19,7 +19,7 @@ public class Problem5Test {
     public void testCapitalizeLast(){
         Problem5 test = new Problem5();
         String input = "I love UNIT Testing";
-        String expected = "I lovE UNIT testinG";
+        String expected = "I lovE UNIT TestinG";
         String actual = test.capitalizeLast(input);
 
         Assert.assertEquals(expected, actual);
@@ -30,7 +30,7 @@ public class Problem5Test {
         Problem5 test = new Problem5();
 
         String input="I love UNIT Testing";
-        String expected="Gnitset TINU Evol I";
+        String expected="GnitseT TINU Evol I";
         String actual = test.finalOutput(input);
 
         Assert.assertEquals(expected, actual);

@@ -12,15 +12,10 @@ public class Problem5 {
         }
         input = input.substring(input.length()/2);
 
-        input = Arrays.toString(
+        input = String.join( " ",
                 Arrays.stream(input.split(" "))
                         .map(word -> word.substring(0,1).toUpperCase()+word.substring(1,word.length()))
-                        .map(word -> word + " ").
-                        collect(Collectors.toList()).toArray());
-
-        input = input.substring(1, input.length()-2);
-        input = input.replaceAll(" ,", "");
-
+                        .collect(Collectors.toList()));
         return input;
     }
 }
